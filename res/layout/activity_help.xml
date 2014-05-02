@@ -1,0 +1,122 @@
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/container"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_margin="16dp"
+    tools:context="com.blitzcalc.HelpActivity"
+    tools:ignore="MergeRootFrame" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical" >
+
+        <TextView
+            android:id="@+id/textViewHelpIntro"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:ellipsize="none"
+            android:maxLines="10"
+            android:scrollHorizontally="false"
+            android:text="@string/help_intro"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <TextView
+            android:id="@+id/textViewHelpDigits"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:ellipsize="none"
+            android:maxLines="10"
+            android:scrollHorizontally="false"
+            android:text="@string/help_digits"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textViewX"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:ellipsize="none"
+                android:maxLines="10"
+                android:scrollHorizontally="false"
+                android:text="✘"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/red"
+                android:textSize="@dimen/button_text_size" />
+
+            <TextView
+                android:id="@+id/textViewHelpIllegal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:ellipsize="none"
+                android:gravity="center_vertical"
+                android:maxLines="10"
+                android:minLines="1"
+                android:scrollHorizontally="false"
+                android:text="@string/illegal_string"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/textViewCheck"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="8dp"
+                android:ellipsize="none"
+                android:maxLines="10"
+                android:scrollHorizontally="false"
+                android:text="✔"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:textColor="@color/green"
+                android:textSize="@dimen/button_text_size" />
+
+            <TextView
+                android:id="@+id/textViewHelpLegal"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_vertical"
+                android:layout_margin="8dp"
+                android:ellipsize="none"
+                android:gravity="center_vertical"
+                android:maxLines="10"
+                android:scrollHorizontally="false"
+                android:text="@string/legal_string"
+                android:textAppearance="?android:attr/textAppearanceLarge" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/textViewHelpObjective"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="8dp"
+            android:ellipsize="none"
+            android:maxLines="10"
+            android:scrollHorizontally="false"
+            android:text="@string/help_objective"
+            android:textAppearance="?android:attr/textAppearanceLarge" />
+
+        <Button
+            android:id="@+id/buttonAbout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_weight="1"
+            android:onClick="onClickAbout"
+            android:text="@string/button_about"
+            android:textSize="@dimen/button_text_size" />
+    </LinearLayout>
+
+</ScrollView>

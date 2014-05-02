@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_id">199010118396</string>
+    <string name="banner_id">ca-app-pub-5130912770009347/3166570516</string>
+    <string name="achievement_first_round">CgkI_NW1r-UFEAIQSA</string>
+    <string name="achievement_on_the_scoreboard">CgkI_NW1r-UFEAIQSQ</string>
+    <string name="achievement_go_10_rounds">CgkI_NW1r-UFEAIQSg</string>
+    <string name="achievement_go_25_rounds">CgkI_NW1r-UFEAIQTA</string>
+    <string name="achievement_be_the_best">CgkI_NW1r-UFEAIQSw</string>
+
+</resources>

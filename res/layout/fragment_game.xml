@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <LinearLayout
+        android:id="@+id/topBarSubLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="4dp" >
+
+        <TextView
+            android:id="@+id/textViewGoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="2"
+            android:minLines="1"
+            android:text="@string/goal_base_text"
+            android:textSize="@dimen/goal_size" />
+
+        <TextView
+            android:id="@+id/textViewTime"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_weight="1"
+            android:drawableLeft="@drawable/clock_icon"
+            android:textSize="@dimen/time_size" />
+
+        <Button
+            android:id="@+id/buttonRefreshGoal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right|center_vertical"
+            android:onClick="onClickRefreshGoal"
+            android:text="↻"
+            android:textSize="@dimen/refresh_size" />
+
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/keypad_fragment_container"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+    </FrameLayout>
+
+</LinearLayout>

@@ -1,0 +1,13 @@
+<resources>
+
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="adview_margin">8dp</dimen>
+    <dimen name="button_text_size">30sp</dimen>
+    <dimen name="result_text_size">60sp</dimen>
+    <dimen name="refresh_size">40sp</dimen>
+ 	<dimen name="time_size">24sp</dimen>   
+ 	<dimen name="goal_size">36sp</dimen>
+ 	<dimen name="main_button_size">40dp</dimen>   
+</resources>
