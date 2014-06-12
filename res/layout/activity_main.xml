@@ -44,6 +44,16 @@
             android:textSize="@dimen/main_button_size" />
 
         <Button
+            android:id="@+id/buttonLeaderboards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_gravity="center_horizontal"
+            android:onClick="onClickLeaderboards"
+            android:text="@string/leaderboards"
+            android:textSize="@dimen/main_button_size" />
+
+        <Button
             android:id="@+id/buttonSettings"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

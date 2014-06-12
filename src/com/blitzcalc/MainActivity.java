@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.google.android.gms.common.ConnectionResult;
 import com.google.android.gms.common.GooglePlayServicesUtil;
+import com.google.android.gms.games.Games;
 import com.google.example.games.basegameutils.GameHelper;
 import com.google.example.games.basegameutils.GameHelper.GameHelperListener;
 
@@ -110,6 +111,14 @@ public class MainActivity extends FragmentActivity implements GameHelperListener
 	public void onClickSettings(View v) {
 		Intent intent = new Intent(this, SettingsActivity.class);
 		startActivity(intent);
+	}
+
+	public void onClickLeaderboards(View v) {
+		if (helper != null && helper.isSignedIn()) {
+			startActivityForResult(Games.Leaderboards.getAllLeaderboardsIntent(helper.getApiClient()), 0);
+		} else {
+			Toast.makeText(this, R.string.must_sign_in, Toast.LENGTH_SHORT).show();
+		}
 	}
 
 	public void onClickHelp(View v) {

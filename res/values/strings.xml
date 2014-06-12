@@ -69,5 +69,6 @@
     <string name="game_prefs">Game</string>
     
     <string name="play_services_error">"Couldn't sign in, disabling Google Play services."</string>
+    <string name="must_sign_in">"Sign in to view leaderboards."</string>
     
 </resources>
