@@ -249,9 +249,14 @@ public class GameActivity extends FragmentActivity implements GameListener, Game
 	}
 
 	protected void doAchievements(double time, double recordTime) {
+		int roundNumber = PreferenceManager.getDefaultSharedPreferences(this).getInt("rounds_finished", 0);
+		roundNumber++;
+		PreferenceManager.getDefaultSharedPreferences(this).edit().putInt("rounds_finished", roundNumber).apply();
+
 		if (helper == null || !helper.isSignedIn()) {
-			return;
+			return; // nothing else to do
 		}
+
 		ResultCallback<Achievements.UpdateAchievementResult> callback = new ResultCallback<Achievements.UpdateAchievementResult>() {
 			@Override
 			public void onResult(UpdateAchievementResult arg0) {
@@ -265,9 +270,6 @@ public class GameActivity extends FragmentActivity implements GameListener, Game
 				Games.Achievements.unlockImmediate(helper.getApiClient(), getString(R.string.achievement_be_the_best)).setResultCallback(callback);
 			}
 		}
-		int roundNumber = PreferenceManager.getDefaultSharedPreferences(this).getInt("rounds_finished", 0);
-		roundNumber++;
-		PreferenceManager.getDefaultSharedPreferences(this).edit().putInt("rounds_finished", roundNumber).apply();
 		if (roundNumber >= 1) {
 			Games.Achievements.unlockImmediate(helper.getApiClient(), getString(R.string.achievement_first_round)).setResultCallback(callback);
 		}
